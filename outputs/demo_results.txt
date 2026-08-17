@@ -1,0 +1,82 @@
+GNN STREAMING FRAUD DETECTION
+CEO DEMONSTRATION RESULTS
+========================================
+
+DATASET
+========================================
+
+PaySim
+
+Historical transactions: 400,000
+Future transactions: 100,000
+
+Account nodes: 593,294
+
+Node features: 4
+
+
+MODEL
+========================================
+
+Temporal GNN
+
+Historical transactions are represented as a transaction graph.
+
+Accounts are graph nodes.
+
+Transactions are directed graph edges.
+
+The model uses historical transaction relationships to rank future
+transactions according to fraud risk.
+
+
+HIGHEST-RISK TRANSACTIONS
+========================================
+
+Rank | Risk Score | Type      | Amount       | Actual
+
+1    | 0.533517   | CASH_OUT  | 281045.17    | 0
+2    | 0.532950   | CASH_OUT  | 40745.94     | 0
+3    | 0.532757   | TRANSFER  | 10000000.00  | 1
+4    | 0.532145   | TRANSFER  | 2540410.33   | 1
+5    | 0.531807   | TRANSFER  | 7476725.66   | 1
+6    | 0.531470   | CASH_OUT  | 124131.56    | 0
+7    | 0.531299   | TRANSFER  | 1494432.21   | 1
+8    | 0.531154   | CASH_OUT  | 139977.61    | 0
+9    | 0.530789   | CASH_OUT  | 70274.18     | 0
+10   | 0.530686   | TRANSFER  | 3204166.87   | 0
+
+
+MODEL SUMMARY
+========================================
+
+Top 100:
+31 fraud
+Precision: 31.00%
+Recall: 3.08%
+
+Top 500:
+150 fraud
+Precision: 30.00%
+Recall: 14.91%
+
+Top 1000:
+170 fraud
+Precision: 17.00%
+Recall: 16.90%
+
+
+CEO DEMONSTRATION CONCLUSION
+========================================
+
+The GNN represents accounts as graph nodes and financial transactions
+as directed edges.
+
+Historical transaction relationships are used to rank future
+transactions by fraud risk.
+
+The highest-risk transactions can be prioritized for analyst
+investigation.
+
+This is a proof-of-concept implementation and not a production
+fraud detection system.

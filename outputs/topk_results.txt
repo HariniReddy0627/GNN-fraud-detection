@@ -1,0 +1,46 @@
+GNN FRAUD DETECTION
+TOP-K RISK ANALYSIS
+========================================
+
+MODEL RANKING
+
+ROC-AUC: 0.8042
+PR-AUC : 0.0300
+
+
+TOP-K ANALYSIS
+========================================
+
+Top-K    Fraud Found    Precision    Recall
+
+10       1              10.00%       2.38%
+25       1               4.00%       2.38%
+50       1               2.00%       2.38%
+100      1               1.00%       2.38%
+250      2               0.80%       4.76%
+500      2               0.40%       4.76%
+1000     9               0.90%       21.43%
+
+
+HIGHEST-RISK TRANSACTIONS
+========================================
+
+Rank 01 | Score: 0.507965 | Actual Fraud: 1
+Rank 02 | Score: 0.507419 | Actual Fraud: 0
+Rank 03 | Score: 0.505610 | Actual Fraud: 0
+Rank 04 | Score: 0.503816 | Actual Fraud: 0
+Rank 05 | Score: 0.503086 | Actual Fraud: 0
+Rank 06 | Score: 0.502906 | Actual Fraud: 0
+Rank 07 | Score: 0.502783 | Actual Fraud: 0
+Rank 08 | Score: 0.502478 | Actual Fraud: 0
+Rank 09 | Score: 0.502346 | Actual Fraud: 0
+Rank 10 | Score: 0.502029 | Actual Fraud: 0
+
+
+NOTE
+========================================
+
+This analysis was performed on the earlier static graph experiment.
+
+The temporal model results are documented separately in
+temporal_results.txt.

@@ -1,0 +1,85 @@
+GNN STREAMING FRAUD DETECTION
+TEMPORAL MODEL RESULTS
+========================================
+
+Dataset:
+PaySim
+
+Transactions used:
+500,000
+
+Temporal split:
+Training transactions: 400,000
+Testing transactions: 100,000
+
+Training time range:
+1 to 42
+
+Testing time range:
+42 to 131
+
+Account nodes:
+593,294
+
+Node features:
+4
+
+Edge features:
+9
+
+Training fraud:
+496
+
+Training normal:
+399,504
+
+Testing fraud:
+1,006
+
+Testing normal:
+98,994
+
+
+MODEL PERFORMANCE
+========================================
+
+Best Epoch:
+1
+
+ROC-AUC:
+0.7010
+
+PR-AUC:
+0.0683
+
+
+TEMPORAL TOP-K PERFORMANCE
+========================================
+
+Top-K    Fraud Found    Precision    Recall
+
+10       4              40.00%       0.40%
+25       8              32.00%       0.80%
+50       14             28.00%       1.39%
+100      31             31.00%       3.08%
+250      68             27.20%       6.76%
+500      150            30.00%       14.91%
+1000     170            17.00%       16.90%
+2500     196            7.84%        19.48%
+5000     217            4.34%        21.57%
+
+
+INTERPRETATION
+========================================
+
+The temporal GNN ranks future transactions according to predicted
+fraud risk.
+
+The Top-500 risk-ranked transactions contained 150 fraudulent
+transactions, producing 30.00% precision and 14.91% recall.
+
+This demonstrates the potential of graph-based transaction ranking
+for prioritizing fraud investigations.
+
+These results are from a PaySim proof-of-concept experiment and
+should not be interpreted as production fraud detection performance.
